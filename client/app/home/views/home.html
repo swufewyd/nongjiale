@@ -2,99 +2,209 @@
 <sb-main-navbar></sb-main-navbar>
 
 <div class="container-fluid">
-<div class="row">
-		<div class="col-md-2" style="border-right:thick double red;text-align:center">
-			<sb-profile-side></sb-profile-side>
+	<div class="row">
+		<div class="col-md-12 " >
+			<ol class="breadcrumb">
+				<li>
+					<a href="#">首頁</a>
+				</li>
+				<li>
+					<a href="#">农家乐</a>
+				</li>
+				<li class="active">test</li>
+			</ol>
 		</div>
+	</div>
 
-		<div class="col-md-7" style="border-right:thick double red">
-			<!-- <a class="btn btn-primary pull-right"  data-animation="am-fade-and-slide-top" data-template="app/home/views/bookmark-create.html" bs-modal="myModalFour">create new bookmark&nbsp;<i class="icon-plus-sign "></i></a> -->
-			<!-- <a title="create a grey folder" data-animation="am-fade-and-slide-top" data-template="tpl.html" bs-modal="myModalFour" class="btn icon-plus icon-large pull-right"></a>
-			<a title="create a blue folder" class="btn icon-plus-sign icon-large pull-right"></a> -->
-			
-			<sb-bookmark></sb-bookmark>
-			<sb-bookmark></sb-bookmark>
-			<sb-bookmark></sb-bookmark>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2" >
+			<div class="input-group">
+				<span style="color:white;font-weight: bold;" class="input-group-addon  label-success">
+					远离城市的喧嚣 <i class="icon-hand-right"></i>
+				</span>
+				<input type="text" class="form-control" placeholder="输入关键字后回车，例如：XXX">
+				<span class="input-group-addon">
+					<a href=""> <i class="icon-search"></i>
+					</a>
+				</span>
+			</div>
 
-			
-		</div>
+			<br />
 
-		<div class="col-md-3" style="text-align:center">
-			<h4>Explore public bookmarks</h4>
-			<input  class="form-control" type="text" placeholder="Type keywords...">
-		</div>
+			<div class="page-header">
+				<span style="color:white;font-weight: bold;font-size:18px;" class="label label-primary">
+					<i class="icon-filter"></i>
+					筛选
+				</span>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<p>
+						一顿饭菜价格(人均)：
+						<a href="">
+							<span class="label label-primary">&lt;20</span>
+						</a>
+						&nbsp;&nbsp;
+						<a href="">
+							<span class="label label-primary">20~30</span>
+						</a>
+						&nbsp;&nbsp;
+						<a href="">
+							<span class="label label-primary">30~40</span>
+						</a>
+						&nbsp;&nbsp;
+						<a href="">
+							<span class="label label-primary">40~50</span>
+						</a>
+						&nbsp;&nbsp;
+						<a href="">
+							<span class="label label-primary">&gt;50</span>
+						</a>
+						&nbsp;&nbsp;
+					</p>
+					<hr />
+					<p>
+						一日住宿价格(人均)：
+						<a href="">
+							<span class="label label-primary">&lt;50</span>
+						</a>
+						&nbsp;&nbsp;
+						<a href="">
+							<span class="label label-primary">50~70</span>
+						</a>
+						&nbsp;&nbsp;
+						<a href="">
+							<span class="label label-primary">70~90</span>
+						</a>
+						&nbsp;&nbsp;
+						<a href="">
+							<span class="label label-primary">90~110</span>
+						</a>
+						&nbsp;&nbsp;
+						<a href="">
+							<span class="label label-primary">&gt;110</span>
+						</a>
+						&nbsp;&nbsp;
+					</p>
+
+				</div>
+			</div>
+
+			<br />
+
+			<div class="panel-group" ng-model="panels.activePanel" bs-collapse>
+				<div class="page-header">
+					<span style="color:white;font-weight: bold;font-size:18px;" class="label label-danger">
+						<i class="icon-fire"></i>
+						热门推荐&nbsp;
+						<a ng-if="-panels.activePanel" class="Home-cursor-pointer" bs-collapse-toggle>
+							<span style="color:white;font-weight: bold;font-size:18px;">
+								<i class="icon-chevron-down"></i>
+							</span>
+						</a>
+
+						<a ng-if="panels.activePanel+1" class="Home-cursor-pointer" bs-collapse-toggle>
+							<span style="color:white;font-weight: bold;font-size:18px;">
+								<i class="icon-chevron-up"></i>
+							</span>
+						</a>
+					</span>
+
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-collapse" bs-collapse-target>
+						<div class="panel-body">
+							<img style="width:300px;" src="assets/images/demo.png">
+							<img style="width:300px;" src="assets/images/demo.png">
+							<img style="width:300px;" src="assets/images/demo.png">
+							<img style="width:300px;" src="assets/images/demo.png">
+							<img style="width:300px;" src="assets/images/demo.png"></div>
+					</div>
+				</div>
+			</div>
+
+			<br />
+
+			<div class="page-header">
+				<span style="color:white;font-weight: bold;font-size:18px;" class="label label-info">
+					<i class="icon-magic"></i>
+					搜索结果
+				</span>
+			</div>
+			<img ui-sref="inn_face" style="width:300px;cursor:pointer" src="assets/images/demo2.png">
+			<img style="width:300px;" src="assets/images/demo2.png">
+			<img style="width:300px;" src="assets/images/demo2.png">
+			<img style="width:300px;" src="assets/images/demo2.png">
+			</div>
+	</div>
+
 </div>
 
-</div>
-
-<!-- <button type="button" class="btn btn-lg btn-primary" data-html="true" data-animation="am-flip-x" bs-dropdown="dropdown">Click to toggle dropdown
-          <br>
-          <small>(using an object)</small>
-        </button> -->
-<!-- <button type="button" class="btn btn-lg btn-primary" data-animation="am-flip-x" bs-dropdown="dropdown">Click to toggle dropdown
-  <br>
-  <small>(using an object)</small>
+<!-- <button type="button" class="btn btn-lg btn-primary" data-html="true" data-animation="am-flip-x" bs-dropdown="dropdown">
+Click to toggle dropdown
+<br>
+<small>(using an object)</small>
 </button>
- -->
-<!-- <button type="button" data-html="true" class="btn btn-lg btn-primary" bs-aside="aside">Click to toggle aside
-  <br>
-  <small>(using an object)</small>
-</button> -->
-
-
-<!-- <button type="button"  class="btn btn-lg btn-primary" data-animation="am-fade-and-slide-top" data-template="tpl.html" bs-modal="myModalFour">
-    <small>4. Using a template</small>
-    </button> 
-    <script type="text/ng-template" id="tpl.html">
-     
-    </script>
 -->
-
+<!-- <button type="button" class="btn btn-lg btn-primary" data-animation="am-flip-x" bs-dropdown="dropdown">
+Click to toggle dropdown
+<br>
+<small>(using an object)</small>
+</button>
+-->
+<!-- <button type="button" data-html="true" class="btn btn-lg btn-primary" bs-aside="aside">
+Click to toggle aside
+<br>
+<small>(using an object)</small>
+</button>
+-->
+<!-- <button type="button"  class="btn btn-lg btn-primary" data-animation="am-fade-and-slide-top" data-template="tpl.html" bs-modal="myModalFour">
+<small>4. Using a template</small>
+</button>
+<script type="text/ng-template" id="tpl.html"></script>
+-->
 <!-- <div style="margin-top:100px" class="container">
 
-	<div class="row">
-		<div class="col-md-4 col-md-offset-2">
-			<a style='font-size:30px;width:380px' class="btn btn-large btn-success" ui-sref="task.create"> <i  class="icon-tasks icon-4x pull-left"></i>
-				<span style='font-size:60px'>task</span>
-			</a>
-		</div>
-		<div style="" class="col-md-4 ">
-			<a style='font-size:30px;width:380px' class="btn btn-large btn-danger" href="#"> <i  class="icon-bell-alt icon-4x pull-left"></i>
-				<span style='font-size:60px'>msg</span>
-			</a>
-		</div>
-	</div>
+<div class="row">
+<div class="col-md-4 col-md-offset-2">
+<a style='font-size:30px;width:380px' class="btn btn-large btn-success" ui-sref="task.create">
+<i  class="icon-tasks icon-4x pull-left"></i>
+<span style='font-size:60px'>task</span>
+</a>
+</div>
+<div style="" class="col-md-4 ">
+<a style='font-size:30px;width:380px' class="btn btn-large btn-danger" href="#">
+<i  class="icon-bell-alt icon-4x pull-left"></i>
+<span style='font-size:60px'>msg</span>
+</a>
+</div>
+</div>
 
-	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-			<ts-circle-menu>
-				<a href="" class="icon-tasks icon-large" ui-sref="task" href="/task"></a>
-				<a href="" class="icon-bell-alt icon-large"></a>
-				<a href="" class="icon-user icon-large"></a>
-				<a href="" class="icon-calendar  icon-large"></a>
-			</ts-circle-menu>
-		</div>
-	</div>
+<div class="row">
+<div class="col-md-4 col-md-offset-4">
+<ts-circle-menu>
+<a href="" class="icon-tasks icon-large" ui-sref="task" href="/task"></a>
+<a href="" class="icon-bell-alt icon-large"></a>
+<a href="" class="icon-user icon-large"></a>
+<a href="" class="icon-calendar  icon-large"></a>
+</ts-circle-menu>
+</div>
+</div>
 
-	<div class="row" style="margin-top:20px">
-	<div class="col-md-4 col-md-offset-2">
-		<a style='font-size:30px;width:380px' class="btn btn-large btn-info" href="#">
-			<i  class="icon-user icon-4x pull-left"></i>
-			<span style='font-size:60px'>me</span>
-		</a>
-	</div>
-	<div style="" class="col-md-5 ">
-		<a style='font-size:30px;width:480px' class="btn btn-large btn-primary" href="#">
-			<i  class="icon-calendar icon-4x pull-left"></i>
-			<span style='font-size:60px;margin-left:-22px'>schedule</span>
-		</a>
-	</div>
-	</div>
+<div class="row" style="margin-top:20px">
+<div class="col-md-4 col-md-offset-2">
+<a style='font-size:30px;width:380px' class="btn btn-large btn-info" href="#">
+<i  class="icon-user icon-4x pull-left"></i>
+<span style='font-size:60px'>me</span>
+</a>
+</div>
+<div style="" class="col-md-5 ">
+<a style='font-size:30px;width:480px' class="btn btn-large btn-primary" href="#">
+<i  class="icon-calendar icon-4x pull-left"></i>
+<span style='font-size:60px;margin-left:-22px'>schedule</span>
+</a>
+</div>
+</div>
 
-
-
-</div> -->
-
-
-
-
+</div>
+-->

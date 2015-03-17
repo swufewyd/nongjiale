@@ -18,5 +18,8 @@ angular.module('njl.home').controller('HomeController', function($scope,$sce){
 
 	$scope.tagObj = {};
 	$scope.tagObj.tagname = 'hahah';
+
+	$scope.panels = [];
+	$scope.panels.activePanel = 0;
 });
 
