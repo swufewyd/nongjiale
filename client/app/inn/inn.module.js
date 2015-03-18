@@ -6,7 +6,7 @@ angular.module('njl.inn')
      // Now set up the states
      $stateProvider
        .state('inn_face', {
-         url: "/inn_face",
+         url: "/inn_face/:inn_id",
          templateUrl: "app/inn/views/inn_face.html",
          controller: 'InnController'
        })

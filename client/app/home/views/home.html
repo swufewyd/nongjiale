@@ -20,11 +20,25 @@
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2" >
+			<h2>广告位</h2>
+			<slick class="slider single-item" current-index="index" responsive="breakpoints" slides-to-show=2 slides-to-scroll=2>
+				<div ng-repeat="slick in slicks track by $index">
+					<a href="inn_face/{{$index}}"><img  style="width:490px;height:510;"  src={{slick.imgUrl}} alt=""></a>
+
+				</div>
+				<p style="text-align:center;">Current index: {{ index/2+1 }}</p>
+
+			</slick>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2" >
 			<div class="input-group">
 				<span style="color:white;font-weight: bold;" class="input-group-addon  label-success">
 					远离城市的喧嚣 <i class="icon-hand-right"></i>
 				</span>
-				<input type="text" class="form-control" placeholder="输入关键字后回车，例如：XXX">
+				<input style="margin-left:5px" type="text" class="form-control" placeholder="输入关键字后回车，例如：XXX">
 				<span class="input-group-addon">
 					<a href=""> <i class="icon-search"></i>
 					</a>
@@ -100,14 +114,14 @@
 						<i class="icon-fire"></i>
 						热门推荐&nbsp;
 						<a ng-if="-panels.activePanel" class="Home-cursor-pointer" bs-collapse-toggle>
-							<span style="color:white;font-weight: bold;font-size:18px;">
-								<i class="icon-chevron-down"></i>
+							<span style="color:white;font-weight: bold;font-size:14px;">
+								展开<i class="icon-chevron-down"></i>
 							</span>
 						</a>
 
 						<a ng-if="panels.activePanel+1" class="Home-cursor-pointer" bs-collapse-toggle>
-							<span style="color:white;font-weight: bold;font-size:18px;">
-								<i class="icon-chevron-up"></i>
+							<span style="color:white;font-weight: bold;font-size:14px;">
+								收起<i class="icon-chevron-up"></i>
 							</span>
 						</a>
 					</span>
@@ -116,7 +130,7 @@
 				<div class="panel panel-default">
 					<div class="panel-collapse" bs-collapse-target>
 						<div class="panel-body">
-							<img style="width:300px;" src="assets/images/demo.png">
+							<img ng-click="jump(18);" style="width:300px;" src="assets/images/demo.png">
 							<img style="width:300px;" src="assets/images/demo.png">
 							<img style="width:300px;" src="assets/images/demo.png">
 							<img style="width:300px;" src="assets/images/demo.png">
@@ -133,7 +147,7 @@
 					搜索结果
 				</span>
 			</div>
-			<img ui-sref="inn_face" style="width:300px;cursor:pointer" src="assets/images/demo2.png">
+			<img ui-sref="inn_face/1" style="width:300px;cursor:pointer" src="assets/images/demo2.png">
 			<img style="width:300px;" src="assets/images/demo2.png">
 			<img style="width:300px;" src="assets/images/demo2.png">
 			<img style="width:300px;" src="assets/images/demo2.png">

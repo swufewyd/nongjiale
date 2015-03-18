@@ -3,7 +3,7 @@
 *
 * Description
 */
-angular.module('njl.home', ['ui.router','njl.inn']);
+angular.module('njl.home', ['ui.router','njl.inn','slick']);
 
 angular.module('njl.home')
 .config(function($stateProvider, $urlRouterProvider,$locationProvider) {

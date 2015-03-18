@@ -8,6 +8,11 @@ var errors = require('./components/errors');
 // var user = require('./user');
 module.exports = function(app) {
 
+  app.post('/api/test',function (req,res) {
+      res.json({"name":"swufewyd"+req.body.params.id});
+
+});
+
   // Insert routes below
   // app.use('/api/things', require('./api/thing'));
 /*  app.post('/api/login',user.login);
