@@ -5,16 +5,16 @@
 'use strict';
 
 var errors = require('./components/errors');
-var user = require('./user');
+// var user = require('./user');
 module.exports = function(app) {
 
   // Insert routes below
   // app.use('/api/things', require('./api/thing'));
-  app.post('/api/login',user.login);
+/*  app.post('/api/login',user.login);
   app.post('/api/checkSession',user.checkSession);
   app.post('/api/delSession',user.logout);
   app.post('/api/reg',user.reg);
-  app.post('/api/checkUserExist',user.checkUserExist);
+  app.post('/api/checkUserExist',user.checkUserExist);*/
 
 
   // All undefined asset or api routes should return a 404
