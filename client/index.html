@@ -17,6 +17,7 @@
       <link rel="stylesheet" href="vendor/angular-motion/dist/angular-motion.min.css">
       <link rel="stylesheet" href="vendor/slick-carousel/slick/slick.css">
       <link rel="stylesheet" href="app/home/css/home.css">
+      <link rel="stylesheet" href="components/filter-box/css/filter-box.css">
       <!-- <link rel="stylesheet" href="//rawgithub.com/mgcrea/bootstrap-additions/master/dist/bootstrap-additions.min.css"> -->
       <!-- <link rel="stylesheet" href="vendor/bootstrap-material-design/dist/css/ripples.min.css"> -->
       <!-- <link rel="stylesheet" href="vendor/bootstrap-material-design/dist/css/material-wfont.min.css"> -->
@@ -38,7 +39,22 @@
 
     <!-- Add your site or application content here -->
     <!-- <div ng-view=""></div> -->
-    <div ui-view></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 " >
+          <ol class="breadcrumb">
+            <li>
+              <a href="#">首頁</a>
+            </li>
+            <li>
+              <a href="#">农家乐</a>
+            </li>
+            <li class="active">test</li>
+          </ol>
+        </div>
+      </div>
+      <div ui-view></div>
+    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 
 
@@ -82,13 +98,20 @@
           <script src="app/home/home.module.js"></script>
           <script src="app/inn/inn.module.js"></script>
           <!-- // <script src="app/task/task.module.js"></script> -->
-          <!-- components -->
+          
           <!-- <script src="components/circle-menu/circleMenu.module.js"></script> -->
           <!-- home -->
           <script src="app/home/controllers/home.controller.js"></script>
           <!-- inn -->
           <script src="app/inn/controllers/inn.controller.js"></script>
           <!--<script src="app/main/main.js"></script>-->
+          <!-- components            -->
+          <!-- search-box -->
+          <script src="components/search-box/searchBox.module.js"></script>
+          <script src="components/search-box/directives/njlSearchBox.directive.js"></script>
+          <!-- filter-box -->
+          <script src="components/filter-box/filterBox.module.js"></script>
+          <script src="components/filter-box/directives/njlFilterBox.directive.js"></script>
           <!-- <script src="components/navbar/navbar.controller.js"></script>
           // <script src="components/socket/socket.service.js"></script> -->
           <!-- endinjector -->

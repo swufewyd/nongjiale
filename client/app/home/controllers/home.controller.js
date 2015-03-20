@@ -19,7 +19,7 @@ angular.module('njl.home').controller('HomeController', function($scope,$sce,$lo
 	$scope.tagObj = {};
 	$scope.tagObj.tagname = 'hahah';
 
-	$scope.panels = [];
+	$scope.panels = {};
 	$scope.panels.activePanel = 0;
 	$scope.slicks = [{'imgUrl':'assets/images/ad1.png'},
 	{'imgUrl':'assets/images/ad2.png'},
@@ -38,5 +38,18 @@ angular.module('njl.home').controller('HomeController', function($scope,$sce,$lo
 	$scope.jump = function(params){
 		$location.path('inn_face/'+params);
 	}
+
+	$scope.searchBox = {};
+	$scope.searchBox.preLabel = "远离城市的喧嚣";
+	$scope.searchBox.placeHolder = "输入关键字后回车，例如：XXX";
+	
+	$scope.recommends = [
+		{'imgUrl':'assets/images/demo.png'},
+		{'imgUrl':'assets/images/demo.png'},
+		{'imgUrl':'assets/images/demo.png'},
+		{'imgUrl':'assets/images/demo.png'},
+		{'imgUrl':'assets/images/demo.png'},
+		{'imgUrl':'assets/images/demo.png'}
+	];
 });
 

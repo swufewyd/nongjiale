@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>
+			一顿饭菜价格(人均)：
+			<a style="margin-left:10px;" ng-click="filterByFoodPrice($index);" class="FilterBox-cursor-pretty" href="" ng-repeat="foodPrice in foodPrices">
+				<span ng-bind-html="foodPrice.price" class="label label-primary"></span>
+			</a>
+			
+		</p>
+		<hr />
+		<p>
+			一日住宿价格(人均)：
+			<a style="margin-left:10px;" class="FilterBox-cursor-pretty" href="" ng-repeat="roomPrice in roomPrices">
+				<span ng-bind-html="roomPrice.price" class="label label-primary"></span>
+			</a>
+		</p>
+
+	</div>
+</div>
