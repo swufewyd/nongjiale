@@ -3,7 +3,7 @@
 *
 * Description
 */
-angular.module('njl.home', ['ui.router']);
+angular.module('njl.home', ['ui.router','njl.inn','slick','njl.searchBox','njl.filterBox']);
 
 angular.module('njl.home')
 .config(function($stateProvider, $urlRouterProvider,$locationProvider) {
@@ -18,6 +18,8 @@ angular.module('njl.home')
          templateUrl: "app/home/views/home.html",
          controller: 'HomeController'
        })
+
+       
        
 
 });
